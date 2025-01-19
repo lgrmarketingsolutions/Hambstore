@@ -230,7 +230,7 @@ html, body {
 }
 
 .inicio {
-    background-image: url("/2.png");
+    background-image: url("2.png");
     background-position: center;
     padding: 200px;
 }
