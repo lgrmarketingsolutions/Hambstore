@@ -1,0 +1,517 @@
+html, body {
+    margin: 0;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.titulo {color: rgb(194, 194, 4);}
+
+#links a{
+    text-decoration: none;
+    color: black;
+    transition: all 0.5s ease;
+    font-size: 18px;
+}
+  
+#links a:hover {
+    color: rgb(1, 101, 1);
+    background-color:rgb(240, 240, 240);
+    border-radius: 20px;
+    padding: 15px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.titulo img {
+    border-radius: 53px;
+    height: 60px;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: row;
+    font-size: 21px;
+}
+
+.titulo img {
+    display: flex;
+    padding: 15px;
+}
+
+#contain {
+    background-color:rgb(250, 250, 250);
+    border-radius: 25px ;
+    padding: 10px;
+}
+
+#contain {
+    flex-direction: row;
+    display:flex;
+    position: fixed;
+    width: 100%;
+}
+
+#contain #links {
+    padding: 30px;
+    padding-left: 550px;
+}
+
+#links a{
+    display: inline-flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+
+.carrito-icon {
+    position: absolute;
+    top: 35px;
+    right: 70px;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.carrito-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+#carritoCantidad {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    padding: 7px;
+    border-radius: 50%;
+    font-size: 14px;
+}
+
+/* Estilo de la ventana modal del carrito */
+.carrito-modal {
+    display: none; /* Inicialmente está oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.carrito-modal-contenido {
+    background-color: white;
+    width: 400px;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.carrito-modal h2 {
+    margin-bottom: 20px;
+}
+
+.carrito-modal ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.carrito-modal ul li {
+    margin-bottom: 10px;
+}
+
+.carrito-modal .cerrar {
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+
+
+
+#carritoModal {
+    max-height: 100%; /* Ajusta este valor según lo necesites */
+    overflow-y: auto; /* Esto permitirá que el contenido del carrito sea desplazable si excede el límite */
+}
+
+#carritoLista {
+    padding-bottom: 20px; /* Espacio adicional para evitar que se solape con el botón "Comprar todo" */
+}
+
+#comprarTodo {
+    margin-top: 10px; /* Ajusta el margen para que siempre se vea */
+    display: block; /* Asegúrate de que el botón se muestre como bloque */
+    width: 100%; /* Puedes hacerlo de todo el ancho si quieres que se ajuste */
+}
+
+/* Botón comprar todo */
+#comprarTodo {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+#comprarTodo:hover {
+    background-color: darkgreen;
+}
+
+
+.eliminar {
+    background-color:rgb(4, 205, 4);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white; 
+    border: none; 
+    padding: 5px 10px; 
+    font-size: 16px; 
+    border-radius: 50%; 
+    cursor: pointer; 
+    margin-left: 10px; 
+    transition: all 0.3s ease; 
+}
+
+.eliminar:hover {
+    background-color: #c0392b; 
+    transform: scale(1.1);
+    font-weight: bold;
+    border: 2px;
+}
+
+.eliminar:focus {
+    outline: none; /* Quitar el contorno cuando el botón está enfocado */
+}
+
+.eliminar:active {
+    transform: scale(0.9); /* Hacer que el botón se "encoja" al hacer clic */
+}
+
+
+.inicio {
+    text-align: center;
+    display: block;
+    flex-direction: column;
+}
+
+.inicio {
+    display: flex;
+}
+
+.inicio {
+    padding-top: 0px;
+    color:rgb(255, 255, 255);
+}
+
+.h1 {font-size: 50px;}
+
+.buy {
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: rgb(100, 161, 8);
+}
+
+.buy:hover {
+    background-color: green;
+}
+
+.inicio {
+    background-image: url("/2.png");
+    background-position: center;
+    padding: 200px;
+}
+
+.flechita{
+    background-color: rgb(247, 247, 247);
+    border: none;
+    width: 5%;
+    height: 8%;
+    border-radius: 10px;
+}
+
+.flechita {
+    position: absolute;
+    margin-left: 900px;
+    margin-top: 100px;
+}
+
+
+.nosotros {
+    display: block;
+   text-align: center;
+    font-size: 20px;
+}
+
+.nosotros p {
+    display: block;
+    flex-direction: column;
+    white-space: pre-line;
+}
+
+#nos, #hamb{
+    padding: 30px;
+    color: white;
+}
+
+#hamb {padding: 20px;}
+
+.Productos{ white-space: pre-line;}
+
+.Productos img{
+    border-radius: 20px;
+    height: 200px;
+}
+
+.Productos button {
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(124, 204, 4);
+    color: white;
+    transition: all 0.3s ease ;
+    padding: 20px;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.Productos button:hover{
+    background-color: rgb(84, 135, 8);
+    font-size: 17px;
+    border: 2px solid rgba(0,0,0,0.3);
+}
+
+.part1 {
+    display: flex;
+    flex-direction: row;
+    gap: 455px;
+}
+
+.part1 p{font-size:  17px;}
+.part1 h3{font-size: 25px;}
+
+.uno {
+    display: block;
+    flex-direction: column;
+    padding-left: 40px;
+    text-align: center;
+}
+
+.dos {
+    display: block;
+    flex-direction: column;
+    text-align: center;
+}
+
+.part2{
+    display: flex;
+    flex-direction: row;
+    gap: 400px;
+}
+
+#d {
+    padding-top: 100px;
+}
+
+.part2 p{font-size: 17px;}
+.part2 h3{font-size: 25px;}
+
+.tres {
+    display: block;
+    flex-direction: column;
+    text-align: center;
+}
+
+.cuatro {
+    display: block;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.Contacto {
+    text-align: center;
+    display: block;
+    padding-top: 50px;
+}
+
+.Contacto h2 {
+    color: rgb(78, 122, 11);
+    font-size: 40px;
+}
+
+.Contacto ul{
+    font-size: 23px;
+}
+
+.Contacto ul{
+    list-style-type: none;
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media screen and (max-width: 768px) {
+    /* Ajusta el header para que se vea más compacto */
+
+    body {
+        align-items: center;
+        text-align: center;
+    }
+
+    #contain {
+        flex-direction: column;
+        padding: 15px;
+        margin-right: 500px;
+        display: block;
+    }
+
+    .titulo{margin-left: 100px;}
+
+    .titulo img{margin-left: 30px;}
+
+    #links {
+        padding: 0;
+        display: flex;
+        margin-left: 100px;
+    }
+
+    #links a {
+        font-size: 16px;
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    .carrito-icon {
+        position: relative;
+        top: 0;
+        right: 0;
+        font-size: 25px;
+    }
+
+    .inicio {
+        padding-top: 400px;
+        margin-bottom: 30px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .inicio #cambiarFondoBtn {
+        display: none;
+    }
+
+    .inicio .h1 {
+        font-size: 60px;
+        color: rgb(255, 255, 255);
+        box-shadow: 8px 8px 10px rgb(0,0,0,0.5);
+        margin-bottom: 20px;
+    }
+
+    .buy {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    .Productos {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .part1,
+    .part2 {
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .part1 .uno, .part1 .dos, .part2 .tres, .part2 .cuatro {
+        width: 100%;
+        text-align: center;
+    }
+
+    .Productos button {
+        padding: 10px 20px;
+    }
+
+    .Contacto ul {
+        font-size: 18px;
+    }
+
+    .Contacto h2 {
+        font-size: 30px;
+    }
+
+    .flechita {
+        position: absolute;
+        margin-left: 85%;
+        margin-top: 5%;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles más pequeños) */
+@media screen and (max-width: 480px) {
+    /* Ajustar aún más los tamaños de las fuentes y los márgenes */
+    .h1 {
+        font-size: 25px;
+    }
+
+    .Productos button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .carrito-icon img {
+        width: 40px;
+        height: 40px;
+    }
+
+    #carritoCantidad {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    #comprarTodo {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .titulo img {
+        height: 40px;
+    }
+
+    .titulo {
+        font-size: 18px;
+    }
+
+    #contain #links {
+        padding: 10px 0;
+    }
+
+    .part1, .part2 {
+        gap: 10px;
+    }
+
+    .part1 .uno, .part1 .dos, .part2 .tres, .part2 .cuatro {
+        width: 100%;
+    }
+
+    #nos, #hamb {
+        padding: 10px;
+    }
+
+    .Contacto ul {
+        font-size: 16px;
+    }
+}

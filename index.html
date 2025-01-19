@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hambstore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="container" id="contain">
+        <div class="objetos">
+        <div class="titulo">
+            <h1>Hambstore</h1>
+            <img src="Hambstore1.png"">
+        </div>
+        <div id="links">
+            <a href="#nos">Nosotros</a>
+            <a href="#hamb">Productos</a>
+            <a href="#contac">Contacto</a>
+            <div id="carritoIcono" class="carrito-icon" onclick="mostrarCarrito()">
+                <img src="carrito.png" alt="Carrito">
+                <span id="carritoCantidad">0</span> <!-- Contador de productos -->
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <div id="carritoModal" class="carrito-modal">
+        <div class="carrito-modal-contenido">
+            <span class="cerrar" onclick="cerrarCarrito()">&times;</span>
+            <h2>Tu Carrito</h2>
+            <ul id="carritoLista">
+                <!-- Productos agregados aparecerán aquí -->
+            </ul>
+            <p>Total: $<span id="total">0</span></p>
+            <button id="comprarTodo" onclick="comprarTodo()">Comprar todo</button>
+        </div>
+    </div>
+
+
+    <header class="container">
+        <div class="inicio">
+            <h1 class="h1">Compra ya nuestras <br>
+                hamburguesas
+            </h1>
+            <a href="#products">
+                <button class="buy">Compra ya</button>
+            </a>
+
+            <button id="cambiarFondoBtn" class="flechita">&#8594;</button> <!-- Flecha para cambiar el fondo -->
+        </div>
+    </header>
+
+
+    <div id="nos">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit ullam accusamus harum aut minima et in reiciendis, consequatur optio reprehenderit, dolor ratione? Similique vero sapiente vel incidunt aut qui error?
+        </p>
+    </div>
+
+    <header class="container">
+        <div class="nosotros" id="us">
+            <h2>Somos Hamstore</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, dicta officiis architecto tempore
+                quidem deserun voluptas iusto at inventore obcaecati dolorum commodisolut corporis necessitatibus esse 
+                neque aspernatur! Nihil temporibuconsequuntur accusantium! Ullam blanditiis fugiat eum labore ips omnis 
+                earum quisquam excepturi similique nostrum beatae laboriosam suscipit, officia quae repellendus, reprehenderit
+                consectetur voluptatem doloribus cupiditate eveniet modi eaque quasi laborum.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis amet ratione dolorem possimus, neque rem at
+                libero vero eaque aut?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nam blanditiis repellendus dignissimos fuga
+                omnis, odio quos ab deleniti tempore veniam optio accusantium? Nulla corrupti id cumque ducimus velit? Esse!
+            </p>
+        </div>
+    </header>
+
+    <div id="hamb">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit ullam accusamus harum aut minima et in reiciendis, consequatur optio reprehenderit, dolor ratione? Similique vero sapiente vel incidunt aut qui error?
+        </p>
+    </div>
+
+    <header class="container" >
+        <div class="Productos" id="products">
+            <div class="part1">
+                <div class="uno" id="one">
+                    <img src="hamburguesa.png" alt="" class="img1">
+                    <h3>Hamburguesa clásica</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Tempore, similique? 
+                        $79 Lorem ipsum dolor sit amet.
+                    </p>
+                    <a href="javascript:void(0)">
+                        <button onclick="agregarAlCarrito('Hamburguesa clásica', 79)">Comprar ya</button>
+                    </a>
+                </div>
+                <div class="dos" id="two">
+                    <img src="hamb2.png" alt="" class="img1">
+                    <h3>Hamburguesa especial</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Minus quaerat dignissimos, ipsa hic accusantium
+                        rerum. $99
+                    </p>
+                    <a href="javascript:void(0)">
+                        <button onclick="agregarAlCarrito('Hamburguesa especial', 99)">Comprar ya </button>
+                </a>
+                </div>
+        </div>
+        <div class="part2" id="d">
+            <div class="tres" id="three">
+                <img src="hamb3.png" alt="">
+                <h3>Hamburguesa Doble</h3>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing 
+                    elit. Illo adipisci vero, reiciendis accusantium dolorem 
+                    hic rem? Veniam inventore vero distinctio. 
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. $110
+                </p>
+                <a href="javascript:void(0)">
+                    <button onclick="agregarAlCarrito('Hamburguesa Doble', 110)">Comprar ya </button>
+                </a>
+            </div>
+            <div class="cuatro" id="four">
+                <img src="2.png" alt="">
+                <h3>Hamburguesa al pastor</h3>
+                <p>
+                   Lorem ipsum dolor sit amet consectetur 
+                   adipisicing elit. Vel, aliquam temporibus neque
+                   et blanditiis odit delectus qui hic saepe, rerum 
+                   excepturi corporis reprehenderit molestiae velit $149
+                </p>
+                <a href="javascript:void(0)">
+                    <button onclick="agregarAlCarrito('Hamburguesa al pastor', 149)">Comprar ya </button>
+                </a>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <header class="container">
+        <div class="Contacto" id="contac">
+            <h2>Nuestro contacto</h2>
+            <ul>
+                <li>Numero:####</li>
+                <li>Direccion:.....</li>
+                <li>Instagra y Facebook: Ham...</li>
+            </ul>
+        </div>
+    </header>
+    
+<script src="script.js"></script>
+</body>
+</html>

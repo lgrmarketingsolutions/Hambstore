@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Pago</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="container">
+        <h1>Página de Pago</h1>
+
+        <div class="pago-contenido">
+            <h2>Productos en tu carrito</h2>
+            <ul id="listaPago">
+                <!-- Los productos se mostrarán aquí -->
+            </ul>
+            <p>Total: $<span id="totalPago">0</span></p>
+            <div class="button">
+                <button id="pagarBtn" onclick="pagar()">Pagar ahora</button>
+                <button onclick="volver()" class="volver">Volver</button>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        // Recuperar datos del carrito desde localStorage
+        const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        let total = 0;
+
+        // Mostrar los productos y el total
+        const listaPago = document.getElementById('listaPago');
+        const totalPago = document.getElementById('totalPago');
+
+        carrito.forEach((item, index) => {
+            const li = document.createElement('li');
+            li.innerHTML = `${item.nombre} - $${item.precio} 
+                <button onclick="eliminarProducto(${index})" class="eliminar-btn">x</button>`;
+            listaPago.appendChild(li);
+            total += item.precio;
+        });
+
+        // Mostrar el total
+        totalPago.textContent = total;
+
+        // Función para volver a la página principal
+        function volver() {
+            window.location.href = 'index.html'; // Redirigir a la página principal
+        }
+
+        // Función de pago
+        function pagar() {
+            alert('Gracias por tu compra. ¡Tu pago ha sido procesado!');
+            // Limpiar el carrito después de pagar
+            localStorage.removeItem('carrito');
+            window.location.href = 'index.html'; // Redirigir a la página principal después del pago
+        }
+
+        // Función para eliminar un producto del carrito
+        function eliminarProducto(index) {
+            carrito.splice(index, 1); // Eliminar el producto del array
+            localStorage.setItem('carrito', JSON.stringify(carrito)); // Actualizar el localStorage
+            location.reload(); // Recargar la página para reflejar los cambios
+        }
+    </script>
+
+    <style>
+        html{
+            overflow-x: hidden;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .container {
+            background-color: rgb(253, 253, 253);
+            box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
+            text-align: center;
+            padding: 160px;
+            position: absolute;
+            margin-left: 600px;
+            margin-top: 300px;
+            border-radius: 20px;
+            gap: 30px;
+            max-width: 500px;
+            transform: translate(-50%, -50%)
+        }
+
+        button {
+            border: none;
+            border-radius: 20px;
+            padding: 8px;
+            font-weight: bold;
+            font-size: 15px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            color: rgb(255, 255, 255);
+            background-color: rgb(151, 178, 107);
+            transition: all 0.5s ease;
+        }
+
+        button:hover {
+            background-color: rgb(79, 127, 6);
+            font-size: 18px;
+        }
+
+        .eliminar-btn {
+            margin-left: 10px;
+            background-color: rgb(196, 0, 0);
+            border-radius: 20px;
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        .eliminar-btn:hover {
+            background-color: rgb(121, 0, 0);
+            font-size: 20px;
+        }
+
+        li {
+            list-style-type: none;
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            position: relative;
+            color: rgb(75, 122, 3);
+        }
+    </style>
+
+<style>
+    /* Media queries para pantallas pequeñas */
+    @media screen and (max-width: 768px) {
+        body{ overflow-x: hidden;}
+        .container {
+            width: 90%;
+            padding: 20px;
+            margin: 210px;
+
+        }
+
+        button {
+            padding: 8px;
+            font-size: 14px;
+        }
+
+        .eliminar-btn {
+            font-size: 14px;
+            padding: 8px 12px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        li {
+            font-size: 14px;
+        }
+    }
+
+    
